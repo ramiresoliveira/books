@@ -1,0 +1,20 @@
+{
+  "name": "books",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Ramires Oliveira"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-local-storage": "^0.5.2"
+  }
+}

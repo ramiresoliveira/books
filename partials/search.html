@@ -1,0 +1,51 @@
+<style type="text/css">
+  .box {
+    height: 309px;
+    margin-left: 30px;
+    cursor: pointer;
+  }
+  .box:hover {
+    border-color: #337ab7;
+  }
+  .custom-content-panel{
+    margin-top: 10px;
+  }
+  .default-book {
+    width: 138px;
+    height: 190px;
+  }
+</style>
+<div class="container">
+<br>
+<br>
+  <div class="row">
+    <div class="col-md-3">&nbsp;</div>
+    <div class="col-md-5 text-center "><h1>Books!</h1></div>
+  </div>
+  <div class="row">
+    <div class="col-md-3">&nbsp;</div>
+    <div class="col-md-5">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Busca..." ng-model="query" >
+        <div class="input-group-btn">
+          <button class="btn btn-default" ng-click="search()"><span class="glyphicon glyphicon-search"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-md-2 panel panel-default box" ng-repeat="b in books" ng-click="navigate(b.id)">
+      <div class="custom-content-panel">
+      <img class="default-book img-responsive center-block img-thumbnail"
+          ng-if="!b.volumeInfo.readingModes.image"
+          ng-src="/lib/book.gif">
+      <img class="img-responsive center-block img-thumbnail"
+          ng-if="b.volumeInfo.readingModes.image"
+          ng-src="{{b.volumeInfo.imageLinks.thumbnail}}" >
+      <!-- <h3 class="panel-title text-center" ng-bind="b.volumeInfo.title"></h3> -->
+      <label class="text-center" ng-bind="b.volumeInfo.title"></label>
+      </div>
+    </div>
+  </div>
+</div>
