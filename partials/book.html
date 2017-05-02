@@ -2,9 +2,7 @@
   <div class="page-header">
     <h2>{{book.volumeInfo.title}} <small>{{book.volumeInfo.authors.join(', ')}}</small></h2>
   </div>
-  <!-- <div class="row"> -->
-    <a class="btn btn-sm btn-default" href="javascript:void(0)" ng-click="prev()">Voltar</a>
-  <!-- </div> -->
+  <a class="btn btn-sm btn-default" href="javascript:void(0)" ng-click="prev()">Voltar</a>
   <br><br>
   <div class="row">
       <div class="col-md-4">
@@ -16,20 +14,3 @@
       </div>
   </div>
 </div>
-
-<!-- <md-card md-theme-watch>
-<md-card-title>
-  <md-card-title-media>
-    <img ng-src="{{book.volumeInfo.imageLinks.small}}">
-  </md-card-title-media>
-  <md-card-title-text>
-    <span class="md-headline" ng-bind="book.volumeInfo.title"></span>
-    <span class="md-subhead" ng-bind="book.volumeInfo.authors.join(', ')"></span>
-    <p ng-bind="book.volumeInfo.description"></p>
-  </md-card-title-text>
-</md-card-title>
-<md-card-actions layout="row" layout-align="end center">
-  <md-button>Action 1</md-button>
-  <md-button>Action 2</md-button>
-</md-card-actions>
-</md-card> -->
